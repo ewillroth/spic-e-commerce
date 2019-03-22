@@ -1,3 +1,5 @@
+var firebase = require('firebase')
+
 // Initialize Firebase
 var config = {
 	apiKey: process.env.REACT_APP_FIREBASE_API,
@@ -7,4 +9,10 @@ var config = {
 	storageBucket: "spicy-boys.appspot.com",
 	messagingSenderId: "675452609959"
 };
-firebase.initializeApp(config);
+
+var firebaseApp = firebase.initializeApp(config);
+var db = firebaseApp.database()
+
+module.exports = {
+	db
+}

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import logo from './assets/spicyboys.png';
 import {emailValidator} from './functions';
+import axios from 'axios';
 
 const Splash = () => {
 
@@ -20,6 +21,14 @@ const Splash = () => {
 		e.preventDefault()
 		if(emailValidator(email)){
 			console.log('submitting form')
+			axios.post('/api/email', {email})
+			.then(response=>{
+				console.log(response)
+				setEmail('')
+			})
+			.catch(error=>{
+				console.log(error)
+			})
 		} else {
 			alert('enter a valid email')
 		}
@@ -32,7 +41,7 @@ const Splash = () => {
 			<form onSubmit={handleEmailSubmit} className="emailForm">
 				<div className="input">
 					<label className={email?"inputlabel":"hide"} htmlFor="email">email</label>
-					<input placeholder="email" name="email" onChange={handleChange} id="email"></input>
+					<input value={email} placeholder="email" name="email" onChange={handleChange} id="email"></input>
 				</div>
 				<button>Submit</button>
 			</form>
