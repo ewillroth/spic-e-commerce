@@ -1,0 +1,49 @@
+@import 'variables';
+@import 'reset';
+
+.Splash {
+	@include flex(column);
+	height: 100vh;
+	.logoImg {
+		width: 500px;
+	}
+	
+	.emailForm {
+		@include flex(column);
+		button {
+			@include button(#7BC950);
+			margin-top: 10px
+		}
+	}
+
+	#tagline{
+		margin: 15px 0;
+	}
+}
+
+
+.input {
+	input {
+		position: relative;
+		right: 22px;
+		border: 1px solid rgba(0,0,0,.3);
+		padding: 20px 0 2px 2px;
+		width: 240px;
+	}
+	input::placeholder {
+		font: $textfont;
+		font-size: 16;
+	}
+	.inputlabel {
+		position: relative;
+		left: 18px;
+		bottom: 20px;
+		color: #808080;
+		font: $textfont;
+		font-size: 16;
+	}
+}
+
+.hide {
+	color: rgba(0,0,0,0);
+}

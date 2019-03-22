@@ -1,0 +1,115 @@
+/* 
+ * https://github.com/jtrost/Complete-CSS-Reset
+*/
+/* Displays for HTML 5 */
+article, aside, audio, command, datagrid, details, dialog, embed,
+figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+video, wbr {
+  display: block;
+}
+
+bdi, figcaption, keygen, mark, meter, progress, rp, rt, ruby, time {
+  display: inline;
+}
+
+/* Deprecated tags */
+acronym, applet, big, center, dir, font, frame, frameset, noframes, s,
+strike, tt, u, xmp {
+  display: none;
+}
+
+/* Reset styles for all structural tags */
+a, abbr, area, article, aside, audio, b, bdo, blockquote, body, button,
+canvas, caption, cite, code, col, colgroup, command, datalist, dd, del,
+details, dialog, dfn, div, dl, dt, em, embed, fieldset, figure, form,
+h1, h2, h3, h4, h5, h6, head, header, hgroup, hr, html, i, iframe, img,
+input, input::placeholder, ins, keygen, kbd, label, legend, li, map, mark, menu, meter, nav,
+noscript, object, ol, optgroup, option, output, p, param, pre, progress,
+q, rp, rt, ruby, samp, section, select, small, span, strong, sub, sup,
+table, tbody, td, textarea, tfoot, th, thead, time, tr, ul, var, video {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: baseline;
+  z-index: 1;
+}
+
+/* Miscellaneous resets */
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.Splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.Splash .logoImg {
+  width: 500px;
+}
+.Splash .emailForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Splash .emailForm button {
+  background-color: #7BC950;
+  padding: 8px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+.Splash #tagline {
+  margin: 15px 0;
+}
+
+.input input {
+  position: relative;
+  right: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 20px 0 2px 2px;
+  width: 240px;
+}
+.input input::placeholder {
+  font: arial;
+  font-size: 16;
+}
+.input .inputlabel {
+  position: relative;
+  left: 18px;
+  bottom: 20px;
+  color: #808080;
+  font: arial;
+  font-size: 16;
+}
+
+.hide {
+  color: rgba(0, 0, 0, 0);
+}
+
+/*# sourceMappingURL=style.css.map */
