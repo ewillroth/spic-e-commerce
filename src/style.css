@@ -108,8 +108,12 @@ table {
   font-size: 16;
 }
 
-.hide {
+.rgbahide {
   color: rgba(0, 0, 0, 0);
+}
+
+.hide {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
