@@ -9,7 +9,7 @@ const addEmail = (req,res,next) => {
 		if (Object.values(emails).includes(req.body.email)){
 			res.status(200).json("email is already in db")
 		} else {
-			emails.push(req.body.email)
+			emailsRef.push(req.body.email)
 				.then(response => res.status(200).json('email is added'))
 				.catch(error => console.log(error) || res.status(400).json('couldnt add email'))
 		}
