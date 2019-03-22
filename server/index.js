@@ -1,4 +1,5 @@
 require('dotenv').config()
+const path = require('path'); // Usually moved to the start of file
 const {json} = require('body-parser')
 const express = require('express')
 const session = require('express-session')
@@ -20,6 +21,12 @@ app.use(session({
 
 app.post('/api/email', ctrl.addEmail)
 
+
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "../build/index.html"));
+});
+
 app.listen(port, ()=>{
 	console.log(`listening on ${port}`)
 })
+
