@@ -1,4 +1,5 @@
 const {db} = require('../src/firebase')
+const nodemailer = require('nodemailer')
 
 const addEmail = (req,res,next) => {
 	let emailsRef = db.ref('emails/')
@@ -16,6 +17,30 @@ const addEmail = (req,res,next) => {
 	})
 }
 
+async function sendEmail(req, res) {
+	let transporter = nodemailer.createTransport({
+		host: "smtp.gmail.com",
+		port: 587,
+		secure: false,
+		auth: {
+			user: process.env.NODEMAILER_ACCOUNT,
+			pass: process.env.NODEMAILER_PASS
+		}
+	});
+
+	let mailOptions = {
+		from: `"Spicy Boys" <${process.env.NODEMAILER_ACCOUNT}>`, // sender address
+		to: ``, // list of receivers
+		subject: ``, // Subject line
+		text: ``, // plain text body
+		html: `` // html body
+	};
+
+	// send mail with defined transport object
+	await transporter.sendMail(mailOptions)
+}
+
 module.exports = {
-	addEmail
+	addEmail,
+	sendEmail
 }
