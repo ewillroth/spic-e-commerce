@@ -1,5 +1,5 @@
 require('dotenv').config()
-const path = require('path'); // Usually moved to the start of file
+const path = require('path');
 const {json} = require('body-parser')
 const express = require('express')
 const session = require('express-session')
@@ -20,7 +20,6 @@ app.use(session({
 }))
 
 app.post('/api/email', emailCtrl.addEmail)
-
 
 app.get("*", (req, res) => {
 	res.sendFile(path.join(__dirname, "../build/index.html"));

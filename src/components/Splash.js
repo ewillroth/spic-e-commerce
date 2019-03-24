@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import logo from './assets/spicyboys.png';
-import {emailValidator} from './functions';
+import logo from '../assets/spicyboys.png';
+import {emailValidator} from '../functions';
 import axios from 'axios';
 
 const Splash = () => {
