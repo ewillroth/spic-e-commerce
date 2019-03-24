@@ -4,7 +4,7 @@ const {json} = require('body-parser')
 const express = require('express')
 const session = require('express-session')
 const cors = require('cors')
-const ctrl = require('./controller')
+const emailCtrl = require('./emailController')
 const app = express()
 const port = process.env.PORT || 4444
 app.use(express.static(`${__dirname}/../build`));
@@ -19,7 +19,7 @@ app.use(session({
 	}
 }))
 
-app.post('/api/email', ctrl.addEmail)
+app.post('/api/email', emailCtrl.addEmail)
 
 
 app.get("*", (req, res) => {
