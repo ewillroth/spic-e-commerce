@@ -12,7 +12,10 @@ var config = {
 
 var firebaseApp = firebase.initializeApp(config);
 var db = firebaseApp.database()
+var provider = new firebase.auth.GoogleAuthProvider();
 
 module.exports = {
-	db
+	db,
+	provider,
+	firebase
 }
