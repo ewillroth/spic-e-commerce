@@ -5,15 +5,18 @@ import axios from 'axios'
 
 const Admin = () => {
 
-	const [user, setUser] = useState('')
+	const [user, setUser] = useState(false)
 
 	const getUser = async () => {
 		let response = await axios.get('/api/user')
-		console.log(response)
 		//if response is a user
-		setUser(response)
+		if (response.data !== "no current user"){
+			setUser(response.data)
+		} else {
+			console.log('no user logged in')
+		}
 	}
-	useEffect(getUser, [])
+	useEffect(()=>{getUser()}, [])
 	
 	return (
 		user?<Dashboard/>:<Login/>
