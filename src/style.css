@@ -131,6 +131,9 @@ table {
   .Splash #tagline {
     font-size: 14px;
   }
+  .Splash #signup {
+    font-size: 12px;
+  }
   .Splash .emailForm button {
     padding: 6px;
     font-size: 10px;
@@ -155,11 +158,11 @@ table {
   .Splash .logoImg {
     width: 220px;
   }
-  .Splash #comingSoon {
-    font-size: 12px;
+  .Splash #signup {
+    font-size: 10px;
   }
   .Splash #tagline {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .input input {
