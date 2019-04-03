@@ -116,4 +116,61 @@ table {
   display: none;
 }
 
+@media (max-width: 670px) {
+  .Splash .logoImg {
+    width: 250px;
+  }
+  .Splash #tagline {
+    font-size: 12px;
+  }
+
+  .input input {
+    position: relative;
+    right: 11px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 10x 0 1px 1px;
+    width: 200px;
+  }
+  .input input::placeholder {
+    font: arial;
+    font-size: 8;
+  }
+  .input .inputlabel {
+    position: relative;
+    left: 9px;
+    bottom: 10px;
+    color: #808080;
+    font: arial;
+    font-size: 8;
+  }
+}
+@media (max-width: 470px) {
+  .Splash .logoImg {
+    width: 220px;
+  }
+  .Splash #tagline {
+    font-size: 10px;
+  }
+
+  .input input {
+    position: relative;
+    right: 11px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 10x 0 1px 1px;
+    width: 200px;
+  }
+  .input input::placeholder {
+    font: arial;
+    font-size: 8;
+  }
+  .input .inputlabel {
+    position: relative;
+    left: 9px;
+    bottom: 10px;
+    color: #808080;
+    font: arial;
+    font-size: 8;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
