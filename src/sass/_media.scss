@@ -6,6 +6,12 @@
 		#tagline {
 			font-size: 14px;
 		}
+		.emailForm {
+			button {
+				padding: 6px;
+				font-size: 10px;
+			}
+		}
 	}
 	.input {
 		input {
@@ -25,7 +31,7 @@
 	}
 }
 
-@media (max-width: 470px) {
+@media (max-width: 450px) {
 	.Splash {
 		.logoImg { 
 			width: 220px;

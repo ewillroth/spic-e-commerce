@@ -123,6 +123,10 @@ table {
   .Splash #tagline {
     font-size: 14px;
   }
+  .Splash .emailForm button {
+    padding: 6px;
+    font-size: 10px;
+  }
 
   .input input {
     position: relative;
@@ -139,7 +143,7 @@ table {
     display: none;
   }
 }
-@media (max-width: 470px) {
+@media (max-width: 450px) {
   .Splash .logoImg {
     width: 220px;
   }
