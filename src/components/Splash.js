@@ -37,18 +37,42 @@ const Splash = () => {
 	}
 
 	return (
-		<main className='Splash'>
-			<img className="logoImg" src={logo} alt="Plant icon made by Pixel perfect from www.flaticon.com"/>
-			<p id="tagline">{formDisplayed?"Craft spices coming soon. Sign up below for updates.":"Sign up successful! Look forward to updates about our new craft spices."}</p>
-			<form onSubmit={handleEmailSubmit} className={formDisplayed ?"emailForm":"hide"}>
+		<main className="Splash">
+			{/* <p id="comingSoon">Coming soon...</p> */}
+			<img
+				className="logoImg"
+				src={logo}
+				alt="Plant icon made by Pixel perfect from www.flaticon.com"
+			/>
+			<p id="tagline">Innovative, hand-crafted spice blends... coming soon.</p>
+			<p id="signup">
+				{formDisplayed
+					? "Sign up below for Spicy updates!"
+					: "Thanks for signing up! Look forward to updates about our new craft spice blends."}
+			</p>
+			<form
+				onSubmit={handleEmailSubmit}
+				className={formDisplayed ? "emailForm" : "hide"}
+			>
 				<div className="input">
-					<label className={email?"inputlabel":"rgbahide"} htmlFor="email">email</label>
-					<input value={email} placeholder="email" name="email" onChange={handleChange} id="email"></input>
+					<label
+						className={email ? "inputlabel" : "rgbahide"}
+						htmlFor="email"
+					>
+						email
+					</label>
+					<input
+						value={email}
+						placeholder="email"
+						name="email"
+						onChange={handleChange}
+						id="email"
+					/>
 				</div>
 				<button>Submit</button>
 			</form>
 		</main>
-	)
+	);
 }
 
 export default Splash;

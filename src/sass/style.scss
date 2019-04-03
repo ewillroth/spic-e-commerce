@@ -5,7 +5,7 @@
 	@include flex(column);
 	height: 100vh;
 	.logoImg {
-		width: 500px;
+		width: 600px;
 	}
 	
 	.emailForm {
@@ -17,7 +17,16 @@
 	}
 
 	#tagline{
-		margin: 15px 0;
+		font-size: 24px;
+	}
+
+	#signup{
+		margin: 40px 0 10px 0;
+		font-size: 18px;
+	}
+	#comingSoon{
+		margin: 40px 0;
+		font-size: 24px;
 	}
 }
 

@@ -70,7 +70,7 @@ table {
   height: 100vh;
 }
 .Splash .logoImg {
-  width: 500px;
+  width: 600px;
 }
 .Splash .emailForm {
   display: flex;
@@ -85,7 +85,15 @@ table {
   margin-top: 10px;
 }
 .Splash #tagline {
-  margin: 15px 0;
+  font-size: 24px;
+}
+.Splash #signup {
+  margin: 40px 0 10px 0;
+  font-size: 18px;
+}
+.Splash #comingSoon {
+  margin: 40px 0;
+  font-size: 24px;
 }
 
 .input input {
@@ -146,6 +154,9 @@ table {
 @media (max-width: 450px) {
   .Splash .logoImg {
     width: 220px;
+  }
+  .Splash #comingSoon {
+    font-size: 12px;
   }
   .Splash #tagline {
     font-size: 10px;
